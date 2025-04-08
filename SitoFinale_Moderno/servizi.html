@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servizi | Biologo Nutrizionista</title>
+  <meta name="description" content="Scopri tutti i servizi e piani alimentari personalizzati offerti. Prenota la tua consulenza online.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Biologo Nutrizionista</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-sono.html">Chi Sono</a></li>
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>I miei Servizi</h1>
+  </header>
+
+  <section>
+    <ul class="servizi-lista">
+      <li>Consulenza nutrizionale personalizzata</li>
+      <li>Piani alimentari per sportivi</li>
+      <li>Educazione alimentare</li>
+      <li>Controllo del peso e benessere intestinale</li>
+    </ul>
+
+    <div class="calendar">
+      <h2>Prenota un appuntamento</h2>
+      <!-- Sostituisci INSERISCI_TUA_EMAIL_CALENDAR con la tua mail di Google Calendar -->
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=INSERISCI_TUA_EMAIL_CALENDAR&ctz=Europe%2FRome"
+        style="border: 0"
+        width="100%"
+        height="400"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
+
+    <div class="pagamento">
+      <h2>Pagamento</h2>
+      <!-- Sostituisci i placeholder Stripe/PayPal con i tuoi link reali -->
+      <button onclick="window.location.href='https://buy.stripe.com/INSERISCI_TUO_CODICE'">Paga con Stripe</button>
+      <button onclick="window.location.href='https://www.paypal.me/INSERISCI_TUO_ID_PAYPAL'">Paga con PayPal</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - Biologo Nutrizionista</p>
+  </footer>
+</body>
+</html>

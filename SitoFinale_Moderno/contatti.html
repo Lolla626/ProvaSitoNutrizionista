@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti | Biologo Nutrizionista</title>
+  <meta name="description" content="Contattami per maggiori informazioni e per prenotare un appuntamento.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Biologo Nutrizionista</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-sono.html">Chi Sono</a></li>
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contattami</h1>
+  </header>
+
+  <section>
+    <!-- Esempio di integrazione con Formspree: sostituisci /f/TUO_ID con il tuo endpoint reale -->
+    <form action="https://formspree.io/f/TUO_ID" method="POST">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+
+      <!-- Campo invisibile per evitare spam (honeypot) -->
+      <input type="text" name="_honeypot" style="display:none" />
+
+      <p class="privacy-note">
+        Inviando il modulo, acconsenti al trattamento dei tuoi dati personali secondo la normativa vigente (GDPR).
+      </p>
+
+      <button type="submit">Invia</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Biologo Nutrizionista</p>
+  </footer>
+</body>
+</html>
