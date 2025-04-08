@@ -1,242 +1,253 @@
 /* RESET DI BASE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* STRUTTURA BASE */
-  body, html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    height: 100%;
-  }
-  
-  /* NAVBAR RESPONSIVE */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #3a7d44; /* Colore di sfondo */
-    padding: 0.8rem 1rem;
-  }
-  
-  .logo {
-    font-size: 1.3rem;
-    color: #fff;
-    font-weight: bold;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* STRUTTURA BASE */
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  height: 100%;
+}
+
+/* NAVBAR RESPONSIVE */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3a7d44; /* Colore di sfondo */
+  padding: 0.8rem 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.6rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Checkbox hack per il menu responsive */
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .menu-icon {
-    display: none;
-    font-size: 1.6rem;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  /* Checkbox hack per il menu responsive */
-  #menu-toggle {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .menu {
-      position: absolute;
-      top: 56px; /* poco sotto la navbar */
-      right: 0;
-      width: 180px;
-      flex-direction: column;
-      background-color: #3a7d44;
-      display: none; /* di default è nascosto */
-      margin: 0;
-      padding: 0.5rem;
-    }
-  
-    .menu li {
-      margin: 0.5rem 0;
-    }
-  
-    #menu-toggle:checked + .menu-icon + .menu {
-      display: flex; /* quando si clicca sull’hamburger, appare il menu */
-    }
-  
-    .menu-icon {
-      display: block;
-    }
-  }
-  
-  /* HERO SECTION */
-  .hero {
-    /* Aggiorna se l'immagine è in un'altra cartella: */
-    background: url("ai-tool-immagini.webp") center center/cover no-repeat;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.3rem;
-    font-style: italic;
-    margin-bottom: 2rem;
-  }
-  
-  /* BOTTONI */
-  .btn {
-    background-color: #3a7d44;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #2e6135;
-  }
-  
-  /* CONTENUTI VARI */
-  header, section {
-    padding: 2rem 1rem;
-  }
-  
-  h1 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-  }
-  
-  .articoli article {
-    margin-bottom: 2rem;
-  }
-  
-  .bio {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .bio img {
-    max-width: 200px;
-    height: auto;
-    border-radius: 100px;
-    margin-bottom: 1rem;
-  }
-  
-  /* LISTA SERVIZI */
-  .servizi-lista {
-    list-style-type: disc;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-  }
-  
-  /* CALENDAR */
-  .calendar {
-    margin-bottom: 2rem;
-  }
-  
-  /* PAGAMENTO */
-  .pagamento button {
-    margin-right: 1rem;
-    padding: 0.8rem 1.2rem;
-    background-color: #3a7d44;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .pagamento button:hover {
-    background-color: #2e6135;
-  }
-  
-  /* FORM CONTATTI */
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
+    top: 56px; /* poco sotto la navbar */
+    right: 0;
+    width: 180px;
     flex-direction: column;
-  }
-  
-  form label {
-    margin-top: 1rem;
-  }
-  
-  form input[type="text"],
-  form input[type="email"],
-  form textarea {
-    width: 100%;
+    background-color: #3a7d44;
+    display: none; /* di default è nascosto */
+    margin: 0;
     padding: 0.5rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
   }
-  
-  form button[type="submit"] {
-    margin-top: 1.5rem;
-    background-color: #3a7d44;
-    color: #fff;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1rem;
+
+  .menu li {
+    margin: 0.5rem 0;
   }
-  
-  form button[type="submit"]:hover {
-    background-color: #2e6135;
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex; /* quando si clicca sull’hamburger, appare il menu */
   }
-  
-  .privacy-note {
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    font-style: italic;
+
+  .menu-icon {
+    display: block;
   }
-  
-  /* FOOTER */
-  footer {
-    background-color: #3a7d44;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+}
+
+/* HERO SECTION */
+.hero {
+  background: url("ai-tool-immagini.webp") center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+/* Frase più grande, in grassetto, e no-wrap */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  white-space: nowrap; /* testo su una sola riga */
+}
+
+/* Riduci un po' la dimensione su schermi molto piccoli per evitare scrolling orizzontale */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.4rem;
   }
-  
+}
+
+/* CITAZIONE IPPOCRATE */
+.hero-quote {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+
+/* BOTTONI */
+.btn {
+  background-color: #3a7d44;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2e6135;
+}
+
+/* CONTENUTI VARI */
+header, section {
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.articoli article {
+  margin-bottom: 2rem;
+}
+
+.bio {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bio img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+/* LISTA SERVIZI */
+.servizi-lista {
+  list-style-type: disc;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+/* CALENDAR */
+.calendar {
+  margin-bottom: 2rem;
+}
+
+/* PAGAMENTO */
+.pagamento button {
+  margin-right: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: #3a7d44;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagamento button:hover {
+  background-color: #2e6135;
+}
+
+/* FORM CONTATTI */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button[type="submit"] {
+  margin-top: 1.5rem;
+  background-color: #3a7d44;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button[type="submit"]:hover {
+  background-color: #2e6135;
+}
+
+.privacy-note {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer {
+  background-color: #3a7d44;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
